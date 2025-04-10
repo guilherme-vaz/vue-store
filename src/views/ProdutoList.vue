@@ -80,7 +80,7 @@ export default {
     }
   },
   methods: {
-    buscarProdutos() {
+    async buscarProdutos() {
       this.loading = true
       this.erro = ''
 
@@ -88,20 +88,18 @@ export default {
       if (this.busca) params.append('search', this.busca)
       if (this.ordenacao) params.append('sort', this.ordenacao)
 
-      fetch(`http://localhost/api/produtos.php?${params.toString()}`)
-        .then(res => {
-          if (!res.ok) throw new Error('Erro ao carregar produtos')
-          return res.json()
-        })
-        .then(data => {
-          this.produtos = data
-        })
-        .catch(err => {
-          this.erro = err.message
-        })
-        .finally(() => {
-          this.loading = false
-        })
+      const apiUrl = import.meta.env.VITE_API_URL;
+
+      try {
+        const res = await fetch(`${apiUrl}/api/produtos.php?${params.toString()}`)
+        if (!res.ok) throw new Error('Erro ao carregar produtos')
+        const data = await res.json()
+        this.produtos = data
+      } catch (err) {
+        this.erro = err.message
+      } finally {
+        this.loading = false
+      }
     },
     adicionarAoCarrinho(produto) {
       this.carrinho.push(produto)
