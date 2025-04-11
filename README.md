@@ -17,7 +17,7 @@ Este projeto é um frontend construído com **Vue 3** e **Vite**, que consome da
 
 ```bash
 git clone https://github.com/guilherme-vaz/vue-store.git
-cd seu-repositorio
+cd vue-store
 
 ```
 ### 2. Instale as dependências
