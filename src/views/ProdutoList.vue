@@ -73,7 +73,7 @@ export default {
     return {
       produtos: [],
       busca: '',
-      ordenacao: '', // nova propriedade
+      ordenacao: '', 
       loading: false,
       erro: '',
       carrinho: []
