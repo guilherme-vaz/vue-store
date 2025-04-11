@@ -16,7 +16,7 @@ Este projeto é um frontend construído com **Vue 3** e **Vite**, que consome da
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/guilherme-vaz/vue-store.git
 cd seu-repositorio
 
 ```
