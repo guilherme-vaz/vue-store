@@ -1,6 +1,7 @@
 # 📚 Livraria - Frontend Vue 3 + Vite
 
 Este projeto é um frontend construído com **Vue 3** e **Vite**, que consome dados de um backend PHP para exibir uma lista de livros.
+- [Link do projeto rodando](https://vue-store-beta-taupe.vercel.app/)
 
 ## 🚀 Tecnologias usadas
 
