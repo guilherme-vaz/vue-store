@@ -91,7 +91,7 @@ export default {
       const apiUrl = import.meta.env.VITE_API_URL;
 
       try {
-        const res = await fetch(`${apiUrl}${params.toString()}`)
+        const res = await fetch(`${apiUrl}/${params.toString()}`)
         if (!res.ok) throw new Error('Erro ao carregar produtos')
         const data = await res.json()
         this.produtos = data
